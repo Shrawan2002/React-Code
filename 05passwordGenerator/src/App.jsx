@@ -14,7 +14,8 @@ function App() {
   const passwordRef = useRef(null);
 
   const copyPasswordToClipboad = useCallback(()=>{
-    window.navigator.clipboard.write(password)
+    passwordRef.current?.select()
+    window.navigator.clipboard.writeText(password)
   },[password])
     
   const passwordGenerator = useCallback(()=> {
