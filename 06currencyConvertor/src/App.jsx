@@ -42,6 +42,7 @@ function App() {
       <form
        onSubmit={(e) => {
        e.preventDefault();
+       convert();
        }}
       >
  <div className="w-full mb-1">
@@ -49,9 +50,11 @@ function App() {
 label="From"
 amount={amount}
  currencyOptions={options}
- onCurrencyChange={(currency)=>setAmount(amount)}
+ onCurrencyChange={(currency)=>setFrom(currency)}
+
  onAmountChange={(amount)=> setAmount(amount)}
  selectCurrency= {from}
+  
  />
 </div>
 <div className="relative w-full h-0.5">
@@ -66,8 +69,9 @@ amount={amount}
 amount={convertedAmount}
  currencyOptions={options}
  onCurrencyChange={(currency)=>setTo(currency)}
- selectCurrency= {from}
- amountDisable
+ selectCurrency= {to}
+  // onAmountChange={() => {}}
+ amountDisable = {true}
   />
 </div>
  <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">

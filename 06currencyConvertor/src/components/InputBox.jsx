@@ -26,8 +26,9 @@ export default function InputBox({
         type="number" 
         placeholder='Amount'
         disabled = {amountDisable}
+         readOnly={amountDisable}
         value={amount}
-        onClick={(e)=> onAmountChange && onAmountChange(Number(e.target.value))}
+        onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))}
           />
         </div>
         <div className="w-1/2 flex flex-wrap justify-end text-right">
