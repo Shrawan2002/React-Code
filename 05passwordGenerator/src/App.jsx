@@ -49,14 +49,14 @@ function App() {
       </div> */}
 
       <div className="flex items-center justify-center min-h-screen bg-black-800">
-  <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4  text-orange-700 bg-gray-700">
+  <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 pb-3 text-orange-700 bg-gray-700">
     <h1 className="text-white text-center text-xl my-3 ">Password Generator</h1>
     
     <div className="flex shadow rounded-lg overflow-hidden mb-5">
       <input
         type="text"
         value={password}
-        className="outline-none w-full py-1 px-3"
+        className="outline-none w-full  px-3"
         placeholder="password"
         readOnly
         ref={passwordRef}
