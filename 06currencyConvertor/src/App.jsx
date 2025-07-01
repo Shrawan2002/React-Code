@@ -6,7 +6,7 @@ import './App.css'
 function App() {
 
   const [amount,setAmount] = useState(0)
-  let [from,setFrom] = useState("usd")
+  let [from,setFrom] = useState('usd')
   let [to,setTo] = useState("inr")
   const[convertedAmount, setConvertedAmount] = useState(0)
 
@@ -25,7 +25,7 @@ function App() {
     setConvertedAmount(amount*currencyInfo[to])
   }
   
-  let backgroundImage = "https://www.pexels.com/photo/ferris-wheel-17033575/";
+  // let backgroundImage = "https://www.pexels.com/photo/ferris-wheel-17033575/";
 
   return (
   <div className='w-full h-screen flex flex-wrap justify-center 
