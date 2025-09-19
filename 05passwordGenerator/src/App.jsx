@@ -13,11 +13,11 @@ function App() {
 
   const passwordRef = useRef(null);
 
-  const copyPasswordToClipboad = useCallback(()=>{
-    passwordRef.current?.select()
-    passwordRef.current?.setSelectionRange(0,4);
-    window.navigator.clipboard.writeText(password)
-  },[password])
+  // const copyPasswordToClipboad = useCallback(()=>{
+  //   passwordRef.current?.select()
+  //   passwordRef.current?.setSelectionRange(0,4);
+  //   window.navigator.clipboard.writeText(password)
+  // },[password])
     
   const passwordGenerator = useCallback(()=> {
     let pass = ""
