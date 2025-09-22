@@ -1,12 +1,15 @@
-import { useState,useCallback, useEffect} from 'react'
-
+ 
 import './App.css'
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 function App() {
+  let [length, setLength] = useState(8);
+  let [numberAllowed, setNumberAllowed] = useState(false);
+  let [characterAllowed, setCharacterAllowed] = useState(false);
+  let [password, setPassword] = useState("");
   return (
     <>
-    <div>
+    <div className='bg-red-600'>
       hello 
     </div>
     </>
