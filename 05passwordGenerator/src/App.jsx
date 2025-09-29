@@ -24,7 +24,17 @@ function App() {
 
   useEffect(()=>{
     passwordGenerator()
-  },[length,numberAllowed, characterAllowed])
+  },[length,numberAllowed, characterAllowed]);
+
+  // useRef hook
+  const passwordRef = useRef();
+
+  const copyPasswordToClipboard = useCallback(()=>{
+    passwordRef.current?.select()
+    passwordRef.current?.setSelectionRange(0,99);
+    window.navigator.clipboard.writeText(password);
+  },[password])
+
   return (
     <>
     <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-700 bg-gray-800'>
@@ -33,8 +43,9 @@ function App() {
         <input type='text' value={password}
         placeholder='password'
         readOnly 
+        ref={passwordRef}
         className='outline-none w-full py-1 px-3'/>
-        <button className='outline-none  px-2 py-0.5 shrink-0 bg-blue-700 text-white'>Copy</button>
+        <button onClick={copyPasswordToClipboard} className='outline-none  px-2 py-0.5 shrink-0 bg-blue-700 text-white'>Copy</button>
       </div>
       <div className='flex text-sm gap-x-2'>
         <div className='flex items-center gap-x-1 '>
