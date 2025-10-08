@@ -4,8 +4,8 @@ export default function InputBox({
     label,
     amount,
     onAmountChange,
-    onCurrencyChange,
     currencyOptions = [],
+    onCurrencyChange,
     selectCurrency = "usd",
     amountDisable = false,
     currencyDisable = false,
@@ -26,7 +26,7 @@ export default function InputBox({
         type="number" 
         placeholder='Amount'
         disabled = {amountDisable}
-         readOnly={amountDisable}
+        readOnly={amountDisable}
         value={amount}
         onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))}
           />
@@ -49,7 +49,7 @@ export default function InputBox({
                     </option>
                 ))
             }
-        </select>
+        </select> 
         </div>
         </div>
     )
