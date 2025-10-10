@@ -1,22 +1,22 @@
-import { useContext } from "react"
-import { ThemeContext } from "../App"
+// import { useContext } from "react"
+// import { ThemeContext } from "../App"
 
-const Theme = ()=>{
+// const Theme = ()=>{
 
-    let {theme, setTheme} = useContext(ThemeContext);
+//     let {theme, setTheme} = useContext(ThemeContext);
 
-    const changeTheme = ()=>{
-        if(theme === "light"){
-            setTheme("dark");
-        }else{
-            setTheme("light");
-        }
-    }
-    return(
-        <div>
-            <button onClick={changeTheme}>Change Theme</button>
-        </div>
-    )
-}
+//     const changeTheme = ()=>{
+//         if(theme === "light"){
+//             setTheme("dark");
+//         }else{
+//             setTheme("light");
+//         }
+//     }
+//     return(
+//         <div>
+//             <button onClick={changeTheme}>Change Theme</button>
+//         </div>
+//     )
+// }
 
-export default Theme;
+// export default Theme;
